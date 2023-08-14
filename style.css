@@ -37,6 +37,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  color: white;
 }
 
 #root,
@@ -52,18 +53,35 @@ header {
 }
 
 .navbar-brand {
-  padding: 3rem;
+  padding-inline: 3rem;
   margin-right: 0 !important;
 }
 
 .hero__img {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: url(images/homepageheader.jpeg)
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url(images/homepageheader.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero__text {
     height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+
+    .navbar-brand {
+        padding-inline: 0;
+    }
+
+    .navbar {
+        padding-inline: 1rem;
+    }
+    
 }
