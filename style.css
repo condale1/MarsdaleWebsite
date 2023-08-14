@@ -57,6 +57,10 @@ header {
   margin-right: 0 !important;
 }
 
+.nav-link {
+  margin-inline: 1rem;
+}
+
 .hero__img {
     width: 100vw;
     height: 100vh;
