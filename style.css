@@ -62,30 +62,43 @@ header {
 }
 
 .hero__img {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(images/homepageheader.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero__text {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__formContainer {
+  padding: 1rem;
+
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.form-title {
+  color: black;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 480px) {
+  .navbar-brand {
+    padding-inline: 0;
+  }
 
-    .navbar-brand {
-        padding-inline: 0;
-    }
-
-    .navbar {
-        padding-inline: 1rem;
-    }
-    
+  .navbar {
+    padding-inline: 1rem;
+  }
 }
