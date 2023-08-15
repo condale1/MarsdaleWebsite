@@ -1,3 +1,8 @@
+:root {
+
+}
+
+
 *,
 *::before,
 *::after {
@@ -11,6 +16,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: #DDF8F3;
 }
 
 img,
@@ -20,10 +26,6 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-}
-
-img {
-  filter: invert(100%);
 }
 
 input,
@@ -41,11 +43,34 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  color: white;
+  color: #23201A;
+}
+
+a {
+  color: #23201A !important;
+}
+
+footer {
+  overflow: hidden;
+  background-color: #23201A !important;
+}
+
+footer a {
+  text-decoration: none !important;
+  color: white !important;
 }
 
 footer p {
   margin-bottom: 0.2rem;
+  color: white !important;
+}
+
+foot div {
+  color: white !important;
+}
+
+footer img {
+  filter: invert(100%);
 }
 
 #root,
@@ -60,6 +85,24 @@ header {
   top: 0;
 }
 
+.is-hidden {
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.2s;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-hide {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .navbar-brand {
   padding-inline: 3rem;
   margin-right: 0 !important;
@@ -72,13 +115,13 @@ header {
 .hero__img {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/homepageheader.jpeg);
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(221, 248, 253, 0.2)),
+    url(images/homepagehero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hero__text {
+.hero__content {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -89,11 +132,30 @@ header {
 .hero__formContainer {
   padding: 1rem;
 
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(221, 248, 253, 0.5);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+}
+
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+  background-color: #DDF8F3;
+}
+
+.card-img-top {
+  border-radius: 50%;
+}
+
+.card-text::before {
+  content: open-quote;
+}
+
+.card-text::after {
+  content: close-quote;
 }
 
 .form-title {
@@ -115,5 +177,20 @@ header {
 
   .navbar {
     padding-inline: 1rem;
+  }
+
+  .hero__img {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+  }
+
+  .hero__formContainer {
+    width: auto;
+  }
+
+  footer img {
+    max-width: 2rem !important;
+    align-items: center;
   }
 }
