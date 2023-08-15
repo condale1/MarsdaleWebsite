@@ -1,8 +1,3 @@
-:root {
-
-}
-
-
 *,
 *::before,
 *::after {
@@ -48,6 +43,12 @@ h6 {
 
 a {
   color: #23201A !important;
+}
+
+hr {
+  margin: none !important;
+  border: 0;
+  border-top: 5px solid rgba(0, 0, 0, 1);
 }
 
 footer {
