@@ -41,6 +41,14 @@ h6 {
   color: #23201A;
 }
 
+.site-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000; /* Higher z-index to bring the navbar above other content */
+}
+
 a {
   color: #23201A !important;
 }
@@ -79,29 +87,14 @@ footer img {
   isolation: isolate;
 }
 
-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+.navbar {
+  transition: opacity 0.3s ease-in-out; /* Add this line */
 }
 
-.is-hidden {
-  opacity: 0;
-  transition: transform 0.4s, opacity 0.2s;
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.navbar-hide {
-  pointer-events: none;
-  opacity: 0;
+.navbar.hidden {
+  opacity: 0; /* Hide the navbar when hidden class is applied */
+  pointer-events: none; /* Disable interactions with hidden navbar */
+  height: 0; /* Optionally, collapse the height of the navbar */
 }
 
 .navbar-brand {
@@ -114,13 +107,15 @@ header {
 }
 
 .hero__img {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(221, 248, 253, 0.2)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(221, 248, 253, 0.2)),
     url(images/homepagehero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 0; /* Lower z-index to keep it below the navbar */
 }
 
 .hero__content {
