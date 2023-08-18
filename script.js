@@ -54,3 +54,6 @@ tl.from(".hero__header", { y: "100%", ease: Power1.easeOut }, 1)
       .querySelector(".accordion-content")
       .setAttribute("aria-hidden", false);
   }
+
+  let pictl = gsap.timeline();
+  tl.from(".accordion-panel", { y: "5%", ease: Power1.easeOut, stagger: 0.2 }, 1)

@@ -15,13 +15,13 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #DDF8F3;
+  background-color: #ddf8f3;
 }
 
 img,
 picture,
 video,
-canvas{
+canvas {
   display: block;
   max-width: 100%;
 }
@@ -41,7 +41,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  color: #23201A;
+  color: #23201a;
 }
 
 .site-header {
@@ -53,7 +53,7 @@ h6 {
 }
 
 a {
-  color: #23201A !important;
+  color: #23201a !important;
 }
 
 hr {
@@ -64,7 +64,7 @@ hr {
 
 footer {
   overflow: hidden;
-  background-color: #23201A !important;
+  background-color: #23201a !important;
   position: relative;
 }
 
@@ -96,8 +96,8 @@ footer img {
 }
 
 .navbar.hidden {
-  opacity: 0; 
-  pointer-events: none; 
+  opacity: 0;
+  pointer-events: none;
 }
 
 .navbar-brand {
@@ -154,6 +154,7 @@ footer img {
   margin-inline: auto;
   padding-inline: 1rem;
   margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 49.999em) {
@@ -161,12 +162,14 @@ footer img {
     max-width: 50rem;
     margin-inline: auto;
     padding-right: 2rem;
+    margin-top: 7.5rem;
+    margin-bottom: auto;
   }
 }
 
 .accordion {
-  --_button-size: 4rem;
-  --_panel-padding: 0.75rem;
+  --_button-size: 3rem;
+  --_panel-padding: 0.5rem;
   --_panel-gap: 1rem;
 
   display: flex;
@@ -187,7 +190,7 @@ footer img {
 }
 
 .accordion-btn:hover {
-  color: #23201A !important;
+  color: #23201a !important;
 }
 
 .accordion-panel {
@@ -219,7 +222,7 @@ footer img {
 }
 
 .accordion-panel:nth-child(3) {
-  --_panel-color:	#ffffba;
+  --_panel-color: #ffffba;
 }
 
 .accordion-panel:nth-child(4) {
@@ -254,12 +257,25 @@ footer img {
   margin-left: calc(var(--_button-size) + var(--_panel-gap));
 }
 
+@media (max-width: 49.999em) {
+  .accordion-content > p {
+  margin-left: var(--_panel-padding);
+  margin-top: var(--_panel-padding);
+  }
+}
+
 .accordion-content > .accordion-btn {
   margin-bottom: 0.5rem;
   transform: translateY(2rem);
   opacity: 0;
 
   margin-left: calc(var(--_button-size) + var(--_panel-gap));
+}
+
+@media (max-width: 49.999em) {
+  .accordion-content > .accordion-btn {
+  margin-left: var(--_panel-padding);
+  }
 }
 
 .accordion-panel:has([aria-expanded="true"]) p {
@@ -292,10 +308,10 @@ footer img {
   .accordion-title::after {
     content: "";
     position: absolute;
-    left: calc((var(--_panel-gap) + var(--_button-size)) * -1 );
-    width: calc(100% + (var(--_button-size) *2 ));
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 2));
     height: var(--_button-size);
-    background: hsl(0 0% 0% / 0.50);
+    background: hsl(0 0% 0% / 0.5);
     z-index: -1;
     border-radius: 100vw;
   }
@@ -316,7 +332,6 @@ footer img {
 .accordion-panel:has([aria-expanded="true"]) .accordion-image {
   filter: brightness(0.5);
 }
-
 
 .accordion-trigger {
   display: flex;
@@ -352,8 +367,8 @@ footer img {
 
 .VFX__herotext {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
@@ -378,7 +393,7 @@ footer img {
   margin: 0 auto;
   float: none;
   margin-bottom: 10px;
-  background-color: #DDF8F3;
+  background-color: #ddf8f3;
 }
 
 .card-img-top {
@@ -399,17 +414,15 @@ footer img {
 }
 
 .footer__social img {
-
   width: 20px;
   height: 20px;
-
 }
 
 #preloader {
-  background: #23201A url(images/Preloader_9.gif) no-repeat center center;
+  background: #23201a url(images/Preloader_9.gif) no-repeat center center;
   height: 100vh;
   width: 100%;
-  position:fixed;
+  position: fixed;
   z-index: 100;
   background-blend-mode: multiply;
 }
