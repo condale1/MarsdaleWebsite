@@ -206,7 +206,7 @@ footer img {
 
 @media (prefers-reduced-motion: no-preference) {
   .accordion-panel {
-    transition: flex-basis 500ms;
+    transition: flex-basis 500ms, flex-grow 500ms;
   }
 }
 
@@ -231,7 +231,7 @@ footer img {
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
-  flex-basis: clamp(15rem, 40vh, 20rem);
+  flex-basis: clamp(15rem, 40vh, 30rem);
   flex-grow: 1;
   outline: 3px solid var(--_panel-color);
   outline-offset: 4px;
@@ -274,7 +274,7 @@ footer img {
 
 @media (prefers-reduced-motion: no-preference) {
   .accordion-panel:has([aria-expanded="true"]) p {
-    transition: transform 500ms 500ms, opacity 500ms 500ms;
+    transition: transform 500ms 250ms, opacity 500ms 250ms;
   }
   .accordion-panel:has([aria-expanded="true"]) .accordion-btn {
     transition: transform 500ms 500ms, opacity 500ms 500ms;
@@ -307,6 +307,7 @@ footer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 0 10%;
   z-index: -1;
 
   transition: filter 500ms;
@@ -315,6 +316,7 @@ footer img {
 .accordion-panel:has([aria-expanded="true"]) .accordion-image {
   filter: brightness(0.5);
 }
+
 
 .accordion-trigger {
   display: flex;
