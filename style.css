@@ -172,9 +172,6 @@ footer img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  contain: content;
-
 }
 
 @media (min-width: 45em) {
@@ -214,23 +211,23 @@ footer img {
 }
 
 .accordion-panel:nth-child(1) {
-  --_panel-color: hsl(160, 70%, 50%)
+  --_panel-color: #ffb3ba;
 }
 
 .accordion-panel:nth-child(2) {
-  --_panel-color: hsl(184, 70%, 50%)
+  --_panel-color: #ffdfba;
 }
 
 .accordion-panel:nth-child(3) {
-  --_panel-color: hsl(160, 70%, 50%)
+  --_panel-color:	#ffffba;
 }
 
 .accordion-panel:nth-child(4) {
-  --_panel-color: hsl(220, 70%, 50%)
+  --_panel-color: #baffc9;
 }
 
 .accordion-panel:nth-child(5) {
-  --_panel-color: hsl(20, 70%, 50%)
+  --_panel-color: #bae1ff;
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
