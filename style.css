@@ -114,8 +114,6 @@ footer img {
   width: fit-content !important;
   padding-inline: 3rem;
   margin-right: 0 !important;
-  object-fit: cover;
-  overflow: hidden;
 }
 
 .nav-link {
@@ -128,8 +126,7 @@ footer img {
   width: 100vw;
   height: 100vh;
   margin-bottom: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(221, 248, 253, 0.2)),
-    url(images/homepagehero.jpg);
+  background: url(images/brand/Marsdale_Logos/Coloured/Marsdale\ Visuals\ Logo\ -\ Animated\ End\ Screen\ Still.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,6 +148,11 @@ footer img {
   justify-content: center;
   align-items: center;
   padding-bottom: 5rem;
+}
+
+.hero__bgvid {
+  height: 100vh;
+  width: 100vw;
 }
 
 .hero__formContainer {
@@ -182,8 +184,8 @@ footer img {
 }
 
 .accordion {
-  --_button-size: 4rem;
-  --_panel-padding: 0.75rem;
+  --_button-size: 3rem;
+  --_panel-padding: 0.5rem;
   --_panel-gap: 1rem;
 
   display: flex;
