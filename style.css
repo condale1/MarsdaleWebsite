@@ -1,3 +1,10 @@
+:root {
+  --_ff_regular: 'Lato', sans-serif;
+  --_fw_regular_500: 400;
+  --_fw_regular_200: 300;
+  --_fw_regular_900: 900
+}
+
 *,
 *::before,
 *::after {
@@ -15,7 +22,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #ddf8f3;
+  background-color: #E8F0E4;
 }
 
 img,
@@ -42,6 +49,8 @@ h5,
 h6 {
   overflow-wrap: break-word;
   color: #23201a;
+
+  font-family: var(--_ff_regular);
 }
 
 .site-header {
@@ -54,12 +63,19 @@ h6 {
 
 a {
   color: #23201a !important;
+
+  font-family: var(--_ff_regular) !important;
+  font-weight: var(--_fw_regular_500) !important;
 }
 
 hr {
   margin: none !important;
   border: 0;
   border-top: 5px solid rgba(0, 0, 0, 1);
+}
+
+main {
+  background-color: #E8F0E4;
 }
 
 footer {
@@ -102,7 +118,7 @@ footer img {
 }
 
 .navbar-custom {
-  background-color: #0D0E0D;
+  background-color: #E8F0E4;
 }
 
 .navbar.hidden {
@@ -117,8 +133,17 @@ footer img {
 }
 
 .nav-link {
-  color: #CFE5C7 !important;
+  color: #0D0E0D !important;
   margin-inline: 1rem;
+}
+
+.nav-link:hover {
+  font-weight: var(--_fw_regular_900) !important;
+}
+
+.navbar__icon {
+  fill: #0D0E0D !important;
+  background: transparent;
 }
 
 .hero__img {
@@ -142,6 +167,28 @@ footer img {
   padding-bottom: 5rem;
 }
 
+.hero__vidContainerPortrait {
+  position: relative;
+  background-color: #0D0E0D;
+  top: 87px;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  display: none;
+}
+
+.hero__vidContainerLandscape {
+  position: relative;
+  background-color: #0D0E0D;
+  top: 72px;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh; 
+  overflow: hidden;
+  display: none;
+}
+
 .hero__picContent {
   height: 100%;
   display: flex;
@@ -151,8 +198,13 @@ footer img {
 }
 
 .hero__bgvid {
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: hidden;
+  mix-blend-mode: color-burn;
 }
 
 .hero__formContainer {
@@ -163,6 +215,10 @@ footer img {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+}
+
+.home__section {
+  background-color: #CFE5C7;
 }
 
 .wrapper {
@@ -339,7 +395,6 @@ footer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* object-position: 0 10%; */
   z-index: -1;
 
   transition: filter 500ms;
@@ -432,6 +487,18 @@ footer img {
 .footer__social img {
   width: 20px;
   height: 20px;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__copyrightLink {
+
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
 }
 
 #preloader {
